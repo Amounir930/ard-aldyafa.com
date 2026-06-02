@@ -87,43 +87,43 @@ a {
     align-items: center;
 }
 
-.top-bar-info {
-    display: flex;
-    gap: 2rem;
+.announcement-bar {
+    width: 100%;
+    display: block;
+    text-align: center;
 }
 
-.info-item {
+.announcement-text {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-light);
+    white-space: nowrap;
+    padding-top: 0.2rem;
+}
+
+.nav-actions {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-weight: 500;
+    gap: 1.5rem;
 }
 
-.info-item a:hover {
-    color: var(--accent-gold);
-}
-
-.top-bar-icon {
-    width: 14px;
-    height: 14px;
-    color: var(--accent-gold);
-}
-
-.lang-btn-top {
+.lang-btn-nav {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--text-light);
-    padding: 0.25rem 0.8rem;
-    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
     cursor: pointer;
     font-family: inherit;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 700;
     transition: var(--transition-smooth);
 }
 
-.lang-btn-top:hover {
-    border-color: var(--accent-gold);
-    color: var(--accent-gold);
+.lang-btn-nav:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    background: rgba(15, 117, 189, 0.05);
 }
 
 /* Navigation Navbar */
@@ -270,7 +270,7 @@ a {
 
 .hero-grid {
     display: grid;
-    grid-template-cols: 1.2fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: 4rem;
     align-items: center;
 }
@@ -437,7 +437,7 @@ html[lang="en"] .feature-bullets li {
     color: var(--navy-dark);
 }
 
-/* Stats Counter Row (Always Horizontal Grid) */
+/* Stats Counter Row */
 .stats-counter-section {
     background: var(--bg-white);
     padding: 2.5rem 2rem;
@@ -451,7 +451,7 @@ html[lang="en"] .feature-bullets li {
 
 .stats-grid {
     display: grid;
-    grid-template-cols: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     width: 100%;
 }
@@ -547,11 +547,11 @@ html[dir="ltr"] .stat-item:last-child {
 }
 
 .services-row-grid.first-row {
-    grid-template-cols: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .services-row-grid.second-row {
-    grid-template-cols: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     max-width: 800px;
     margin: 0 auto;
 }
@@ -601,14 +601,14 @@ html[dir="ltr"] .stat-item:last-child {
 }
 
 .service-title-text {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--navy-dark);
     margin-bottom: 0.8rem;
     font-weight: 700;
 }
 
 .service-desc-text {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-slate);
     line-height: 1.6;
 }
@@ -637,7 +637,7 @@ html[dir="ltr"] .stat-item:last-child {
 
 .why-us-horizontal-grid {
     display: grid;
-    grid-template-cols: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     width: 100%;
     margin-top: 3rem;
@@ -680,14 +680,14 @@ html[dir="ltr"] .stat-item:last-child {
 }
 
 .why-horizontal-card h4 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--navy-dark);
     margin-bottom: 0.6rem;
     font-weight: 700;
 }
 
 .why-horizontal-card p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.6;
 }
@@ -803,7 +803,7 @@ html[dir="ltr"] .stat-item:last-child {
 
 .contact-cards-horizontal-grid {
     display: grid;
-    grid-template-cols: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin: 3rem 0;
     width: 100%;
@@ -988,7 +988,7 @@ html[dir="rtl"] .custom-toast {
 .footer {
     background: var(--navy-dark);
     color: var(--text-light);
-    padding: 5rem 2rem 2rem;
+    padding: 1.5rem 2rem;
     border-top: 4px solid var(--accent-gold);
 }
 
@@ -999,7 +999,7 @@ html[dir="rtl"] .custom-toast {
 
 .footer-grid {
     display: grid;
-    grid-template-cols: 1.5fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr;
     gap: 4rem;
     margin-bottom: 3.5rem;
 }
@@ -1115,8 +1115,6 @@ html[lang="en"] .footer-contact {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 2rem;
     text-align: center;
 }
 
@@ -1125,7 +1123,7 @@ html[lang="en"] .footer-contact {
     color: var(--text-blue-light);
 }
 
-/* Responsive Media Queries */
+/* Responsive Media Queries - Ensuring Horizontal/Grid Layout remains */
 @media (max-width: 992px) {
     .navbar {
         position: relative;
@@ -1139,7 +1137,7 @@ html[lang="en"] .footer-contact {
         display: none;
     }
     .hero-grid {
-        grid-template-cols: 1fr;
+        grid-template-columns: 1fr;
         gap: 3rem;
     }
     .hero-text-block {
@@ -1151,34 +1149,34 @@ html[lang="en"] .footer-contact {
         width: 100%;
     }
     .services-row-grid.first-row {
-        grid-template-cols: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     .services-row-grid.second-row {
-        grid-template-cols: 1fr;
-        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
     }
     .why-us-horizontal-grid {
-        grid-template-cols: repeat(2, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
     }
     .stats-grid {
-        grid-template-cols: repeat(2, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
     }
     .stat-item {
         border-left: none;
     }
     .contact-cards-horizontal-grid {
-        grid-template-cols: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
     .footer-grid {
-        grid-template-cols: 1fr;
+        grid-template-columns: 1fr;
         gap: 3rem;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 680px) {
     .top-bar {
         padding: 0.5rem 1rem;
     }
@@ -1204,17 +1202,30 @@ html[lang="en"] .footer-contact {
         width: 100%;
         justify-content: center;
     }
-    .services-row-grid.first-row,
+    /* Keeping service cards side-by-side on mobile by using 2-column grid instead of stacking */
+    .services-row-grid.first-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
     .services-row-grid.second-row {
-        grid-template-cols: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
+    /* Keeping features side-by-side on mobile by using 2-column grid */
     .why-us-horizontal-grid {
-        grid-template-cols: 1fr;
-        gap: 1.25rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
+    /* Keeping stats side-by-side on mobile by using 2-column grid or 4-column if small */
     .stats-grid {
-        grid-template-cols: 1fr;
-        gap: 1.25rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+    }
+    .stat-number {
+        font-size: 1.25rem;
+    }
+    .stat-label {
+        font-size: 0.65rem;
     }
     .stat-item {
         border-left: none;
@@ -1236,6 +1247,29 @@ html[lang="en"] .footer-contact {
         height: 40px;
         font-size: 1rem;
     }
+    /* Keep contact cards in a 2-column or 3-column layout on mobile, not stacked */
+    .contact-cards-horizontal-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+    .contact-card-item {
+        padding: 1rem 0.5rem;
+        gap: 0.5rem;
+    }
+    .contact-card-value {
+        font-size: 0.75rem;
+    }
+    .contact-card-label {
+        font-size: 0.65rem;
+    }
+    .contact-card-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .contact-svg-icon {
+        width: 14px;
+        height: 14px;
+    }
     .booking-centered-actions {
         flex-direction: column;
         gap: 1rem;
@@ -1244,5 +1278,18 @@ html[lang="en"] .footer-contact {
     .booking-action-btn {
         width: 100%;
         min-width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    /* 3-column contact grid on extra small screens needs scroll or wrap to fit, let's keep it 3-column but with tiny paddings */
+    .contact-cards-horizontal-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .services-row-grid.first-row,
+    .services-row-grid.second-row {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

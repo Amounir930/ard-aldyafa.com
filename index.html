@@ -39,25 +39,10 @@
 
     <!-- Top Bar Info Panel -->
     <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="top-bar-info">
-                <span class="info-item">
-                    <svg class="top-bar-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                    </svg>
-                    <a href="tel:+97430207961">30207961</a> – <a href="tel:+97455487821">55487821</a>
-                </span>
-                <span class="info-item">
-                    <svg class="top-bar-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    </svg>
-                    <span id="top-bar-zone">قطر</span>
-                </span>
-            </div>
-            <div class="top-bar-actions">
-                <button id="lang-toggle-btn" class="lang-btn-top" aria-label="Switch Language">English</button>
-            </div>
+        <div class="top-bar-container announcement-bar">
+            <marquee direction="right" scrollamount="5" class="announcement-text" onmouseover="this.stop();" onmouseout="this.start();">
+                نوفر لكم عاملات منزليات محترفات بخبرة عالية في جميع أعمال المنزل، مع عقود شهرية مرنة تناسب احتياجات الأسرة وتضمن لكم خدمة موثوقة وجودة مستمرة في دولة قطر.
+            </marquee>
         </div>
     </div>
 
@@ -78,15 +63,14 @@
                     <li><a href="#home" id="menu-home">الرئيسية</a></li>
                     <li><a href="#services" id="menu-services">خدماتنا</a></li>
                     <li><a href="#why-us" id="menu-why">لماذا تختارنا</a></li>
-                    <li><a href="#gallery" id="menu-gallery">معرض الإعلانات</a></li>
+
                 </ul>
             </nav>
 
             <div class="nav-actions">
+                <button id="lang-toggle-btn" class="lang-btn-nav" aria-label="Switch Language">English</button>
                 <a href="https://wa.me/97430207961" target="_blank" class="nav-cta-btn" id="nav-cta-whatsapp">
-                    <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966C16.69 1.975 14.22 1.053 11.59 1.05 6.155 1.05 5.73 5.42 5.726 9.85c-.001 1.716.51 3.39 1.478 4.869l-.469 1.714 1.765-.463-.353-.166zm10.742-5.466c-.328-.164-1.944-.959-2.244-1.07-.3-.11-.518-.164-.736.164-.218.328-.844 1.07-1.034 1.288-.19.218-.38.245-.709.08-1.564-.678-2.61-1.28-3.66-3.084-.28-.48.28-.445.8-.1.468.318.518.427.65.65.132.223.066.418-.033.582-.099.164-.736.873-.956 1.092-.22.218-.44.245-.768.08-1.07-.463-1.916-.856-2.67-2.18-.196-.34-.047-.525.101-.673.133-.133.328-.382.493-.573.164-.191.218-.328.328-.546.11-.218.055-.41-.027-.573-.082-.164-.736-1.774-1.008-2.428-.266-.64-.56-.554-.768-.565-.198-.01-.424-.012-.65-.012-.226 0-.594.085-.905.424-.311.339-1.187 1.162-1.187 2.833 0 1.671 1.217 3.284 1.387 3.512.17.228 2.396 3.658 5.805 5.133.81.35 1.442.56 1.934.717.813.258 1.554.222 2.14.135.653-.098 1.944-.795 2.217-1.56.273-.765.273-1.42.19-1.56-.083-.139-.3-.218-.628-.382z"/>
-                    </svg>
+                    <img src="WhatsApp_icon.png" alt="WhatsApp" class="whatsapp-icon" style="filter: brightness(0) invert(1);">
                     <span id="nav-cta-text">احجز الآن</span>
                 </a>
             </div>
@@ -313,38 +297,7 @@
         </div>
     </section>
 
-    <!-- Visual Image Gallery Section (Ads Gallery Side-by-Side Horizontal Row) -->
-    <section class="gallery-section" id="gallery">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-badge" id="gallery-badge">معرض الإعلانات</span>
-                <h3 class="section-title" id="gallery-title">معرض الإعلانات والخدمات</h3>
-                <p class="section-subtitle" id="gallery-subtitle">تصفح إعلاناتنا وعروضنا الحالية لخدمات العمالة المنزلية في دولة قطر.</p>
-            </div>
-            
-            <div class="carousel-container">
-                <div class="carousel-track" id="carousel-track">
-                    <div class="carousel-slide"><img src="photo/1.jpeg" alt="إعلان أرض الضيافة - 1" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/2.jpeg" alt="إعلان أرض الضيافة - 2" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/3.jpeg" alt="إعلان أرض الضيافة - 3" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/4.jpeg" alt="إعلان أرض الضيافة - 4" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/5.jpeg" alt="إعلان أرض الضيافة - 5" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/6.jpeg" alt="إعلان أرض الضيافة - 6" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/7.jpeg" alt="إعلان أرض الضيافة - 7" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/8.jpeg" alt="إعلان أرض الضيافة - 8" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/9.jpeg" alt="إعلان أرض الضيافة - 9" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/10.jpeg" alt="إعلان أرض الضيافة - 10" loading="lazy"></div>
-                </div>
-                
-                <!-- Controls -->
-                <button class="carousel-btn prev-btn" id="prev-btn" aria-label="Previous image">❮</button>
-                <button class="carousel-btn next-btn" id="next-btn" aria-label="Next image">❯</button>
-                
-                <!-- Indicators -->
-                <div class="carousel-indicators" id="carousel-indicators"></div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Clean Contacts Section (Replaced Booking Form) -->
     <section class="booking-section" id="booking">
@@ -410,28 +363,7 @@
     <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <img src="logo.png" alt="أرض الضيافة" class="footer-logo">
-                    <h5 class="footer-title">أرض الضيافة للخدمات والتجارة</h5>
-                    <p class="footer-desc" id="footer-about-desc">خبرة، ثقة، وراحة تبدأ من منزلك. شريككم الأمثل للعناية بنظافة وترتيب منازلكم في قطر.</p>
-                </div>
-                <div class="footer-links">
-                    <h6 class="footer-section-title" id="footer-links-title">روابط سريعة</h6>
-                    <ul>
-                        <li><a href="#home" id="lnk-home">الرئيسية</a></li>
-                        <li><a href="#services" id="lnk-services">خدماتنا</a></li>
-                        <li><a href="#why-us" id="lnk-why">مميزاتنا</a></li>
-                        <li><a href="#gallery" id="lnk-gallery">معرض الإعلانات</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h6 class="footer-section-title" id="footer-contact-title">اتصل بنا</h6>
-                    <p>📍 الدوحة، دولة قطر</p>
-                    <p>📞 <a href="tel:+97430207961">30207961</a> - <a href="tel:+97455487821">55487821</a></p>
-                    <p>✉️ <a href="mailto:info@ard-aldyafa.com">info@ard-aldyafa.com</a></p>
-                </div>
-            </div>
+
             <div class="footer-bottom">
                 <p class="copyright-text" id="footer-copy-text">جميع الحقوق محفوظة &copy; 2026 أرض الضيافة للخدمات والتجارة.</p>
             </div>
