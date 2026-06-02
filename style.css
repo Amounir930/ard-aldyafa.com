@@ -101,6 +101,46 @@ a {
     padding-top: 0.2rem;
 }
 
+/* Navigation Menu */
+.nav-links-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+    white-space: nowrap;
+}
+
+.nav-menu li a:hover {
+    color: var(--primary-blue);
+    background: rgba(15, 117, 189, 0.08);
+}
+
 .nav-actions {
     display: flex;
     align-items: center;
