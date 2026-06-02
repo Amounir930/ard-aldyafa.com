@@ -3,7 +3,7 @@
 // Translation Dictionary
 const translations = {
     ar: {
-        title: "أرض الضيافة | عاملات وخادمات منزليات بعقود شهرية في قطر",
+        title: "أرض الضيافة | عاملات وخادمات منزليات بعقود شهرية في قطر - 55487821",
         topBarZone: "قطر",
         navSubtitle: "للخدمات والتجارة",
         menuHome: "الرئيسية",
@@ -75,7 +75,7 @@ const translations = {
         langBtnText: "English"
     },
     en: {
-        title: "Ard Al-Dyafa | Domestic Maids & Workers Monthly Contracts in Qatar",
+        title: "Ard Al-Dyafa | Domestic Maids & Workers Monthly Contracts in Qatar - 55487821",
         topBarZone: "Qatar",
         navSubtitle: "for Services & Trade",
         menuHome: "Home",
