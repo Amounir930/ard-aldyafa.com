@@ -27,6 +27,10 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
     
+    <!-- Security & Privacy Policies -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-ancestors 'none';">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,10 +44,21 @@
 
     <!-- Top Bar Info Panel -->
     <div class="top-bar">
-        <div class="top-bar-container announcement-bar">
-            <marquee direction="right" scrollamount="5" class="announcement-text" onmouseover="this.stop();" onmouseout="this.start();">
-                نوفر لكم عاملات منزليات محترفات بخبرة عالية في جميع أعمال المنزل، مع عقود شهرية مرنة تناسب احتياجات الأسرة وتضمن لكم خدمة موثوقة وجودة مستمرة في دولة قطر.
-            </marquee>
+        <div class="top-bar-container">
+            <div class="top-bar-marquee">
+                <marquee id="announcement-marquee" direction="right" scrollamount="5" class="announcement-text">
+                    نوفر لكم عاملات منزليات محترفات بخبرة عالية في جميع أعمال المنزل، مع عقود شهرية مرنة تناسب احتياجات الأسرة وتضمن لكم خدمة موثوقة وجودة مستمرة في دولة قطر.
+                </marquee>
+            </div>
+            <div class="top-bar-phone">
+                <a href="tel:+97455487821" class="top-phone-link">
+                    <svg class="top-phone-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    <span id="top-phone-label">اتصل بنا: </span>
+                    <span class="top-phone-num">55487821</span>
+                </a>
+            </div>
         </div>
     </div>
 

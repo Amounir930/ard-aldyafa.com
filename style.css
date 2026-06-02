@@ -85,12 +85,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
-.announcement-bar {
-    width: 100%;
-    display: block;
-    text-align: center;
+.top-bar-marquee {
+    flex: 1;
+    min-width: 0;
 }
 
 .announcement-text {
@@ -99,6 +99,33 @@ a {
     color: var(--text-light);
     white-space: nowrap;
     padding-top: 0.2rem;
+    display: block;
+}
+
+.top-bar-phone {
+    flex-shrink: 0;
+}
+
+.top-phone-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--accent-gold);
+    font-weight: 700;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: var(--transition-smooth);
+}
+
+.top-phone-link:hover {
+    color: var(--bg-white);
+}
+
+.top-phone-icon {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    fill: none;
 }
 
 /* Navigation Menu */

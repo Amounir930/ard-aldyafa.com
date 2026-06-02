@@ -5,6 +5,7 @@ const translations = {
     ar: {
         title: "أرض الضيافة | عاملات وخادمات منزليات بعقود شهرية في قطر - 55487821",
         topBarZone: "قطر",
+        topPhoneLabel: "اتصل بنا: ",
         navSubtitle: "للخدمات والتجارة",
         menuHome: "الرئيسية",
         menuServices: "خدماتنا",
@@ -77,6 +78,7 @@ const translations = {
     en: {
         title: "Ard Al-Dyafa | Domestic Maids & Workers Monthly Contracts in Qatar - 55487821",
         topBarZone: "Qatar",
+        topPhoneLabel: "Call: ",
         navSubtitle: "for Services & Trade",
         menuHome: "Home",
         menuServices: "Services",
@@ -159,6 +161,7 @@ const langToggleBtn = document.getElementById('lang-toggle-btn');
 // Elements that require translation
 const translatableElements = {
     'top-bar-zone': 'topBarZone',
+    'top-phone-label': 'topPhoneLabel',
     'nav-subtitle': 'navSubtitle',
     'menu-home': 'menuHome',
     'menu-services': 'menuServices',
@@ -232,6 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
     applyLanguage(currentLang);
     initGalleryCarousel();
     initNavbarScroll();
+    initAnnouncementMarquee();
 });
 
 // Localization logic
@@ -278,6 +282,15 @@ function initNavbarScroll() {
             navbar.classList.remove('scrolled');
         }
     });
+}
+
+// Hover play/pause for marquee announcement
+function initAnnouncementMarquee() {
+    const marquee = document.getElementById('announcement-marquee');
+    if (marquee) {
+        marquee.addEventListener('mouseover', () => marquee.stop());
+        marquee.addEventListener('mouseout', () => marquee.start());
+    }
 }
 
 // Photo Gallery Carousel slider logic
