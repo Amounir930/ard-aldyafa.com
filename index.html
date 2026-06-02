@@ -6,7 +6,7 @@
     
     <!-- SEO Meta Tags -->
     <title>أرض الضيافة | عاملات وخادمات منزليات بعقود شهرية في قطر</title>
-    <meta name="description" content="تبحث عن الراحة والأمان؟ أرض الضيافة للخدمات والتجارة توفر عاملات منزليات محترفات ذوات خبرة عالية بعقود شهرية مرنة وأسعار مناسبة في قطر. احجز الآن!">
+    <meta name="description" content="أرض الضيافة للخدمات والتجارة توفر لكم عاملات منزليات محترفات بخبرة عالية في جميع أعمال المنزل في قطر. عقود شهرية مرنة وأسعار مناسبة تضمن لكم الراحة والأمان.">
     <meta name="keywords" content="خادمات في قطر, عاملات منزليات قطر, تنظيف منازل قطر, غسيل وكي ملابس قطر, أرض الضيافة للخدمات, عقود شهرية عاملات">
     <meta name="author" content="أرض الضيافة">
     <meta name="robots" content="index, follow">
@@ -30,24 +30,59 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Top Bar Info Panel -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-info">
+                <span class="info-item">
+                    <svg class="top-bar-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    <a href="tel:+97430207961">30207961</a> – <a href="tel:+97455487821">55487821</a>
+                </span>
+                <span class="info-item">
+                    <svg class="top-bar-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span id="top-bar-zone">قطر</span>
+                </span>
+            </div>
+            <div class="top-bar-actions">
+                <button id="lang-toggle-btn" class="lang-btn-top" aria-label="Switch Language">English</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Header Navigation -->
     <header class="navbar">
         <div class="nav-container">
             <div class="logo-wrapper">
-                <img src="logo.png" alt="أرض الضيافة للخدمات والتجارة" class="nav-logo">
+                <a href="#home">
+                    <img src="logo.png" alt="أرض الضيافة للخدمات والتجارة" class="nav-logo">
+                </a>
                 <div class="logo-info">
                     <span class="logo-text-sub" id="nav-subtitle">للخدمات والتجارة</span>
                 </div>
             </div>
+            
+            <nav class="nav-links-wrapper" aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="#home" id="menu-home">الرئيسية</a></li>
+                    <li><a href="#services" id="menu-services">خدماتنا</a></li>
+                    <li><a href="#why-us" id="menu-why">لماذا تختارنا</a></li>
+                    <li><a href="#gallery" id="menu-gallery">معرض الإعلانات</a></li>
+                </ul>
+            </nav>
+
             <div class="nav-actions">
-                <button id="lang-toggle-btn" class="lang-btn" aria-label="Switch Language">English</button>
                 <a href="https://wa.me/97430207961" target="_blank" class="nav-cta-btn" id="nav-cta-whatsapp">
                     <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966C16.69 1.975 14.22 1.053 11.59 1.05 6.155 1.05 5.73 5.42 5.726 9.85c-.001 1.716.51 3.39 1.478 4.869l-.469 1.714 1.765-.463-.353-.166zm10.742-5.466c-.328-.164-1.944-.959-2.244-1.07-.3-.11-.518-.164-.736.164-.218.328-.844 1.07-1.034 1.288-.19.218-.38.245-.709.08-1.564-.678-2.61-1.28-3.66-3.084-.28-.48.28-.445.8-.1.468.318.518.427.65.65.132.223.066.418-.033.582-.099.164-.736.873-.956 1.092-.22.218-.44.245-.768.08-1.07-.463-1.916-.856-2.67-2.18-.196-.34-.047-.525.101-.673.133-.133.328-.382.493-.573.164-.191.218-.328.328-.546.11-.218.055-.41-.027-.573-.082-.164-.736-1.774-1.008-2.428-.266-.64-.56-.554-.768-.565-.198-.01-.424-.012-.65-.012-.226 0-.594.085-.905.424-.311.339-1.187 1.162-1.187 2.833 0 1.671 1.217 3.284 1.387 3.512.17.228 2.396 3.658 5.805 5.133.81.35 1.442.56 1.934.717.813.258 1.554.222 2.14.135.653-.098 1.944-.795 2.217-1.56.273-.765.273-1.42.19-1.56-.083-.139-.3-.218-.628-.382z"/>
@@ -58,45 +93,95 @@
         </div>
     </header>
 
-    <!-- Split Hero Section -->
-    <section class="split-hero" id="home">
-        <div class="hero-split-container">
-            <!-- Text Content Column -->
-            <div class="hero-text-col">
-                <span class="hero-badge" id="hero-badge-txt">✨ خدمة موثوقة وجودة مستمرة في قطر</span>
-                <h2 class="hero-title" id="hero-main-title">هل تبحث عن الراحة والاهتمام الكامل بمنزلك؟</h2>
-                <p class="hero-subtitle" id="hero-desc-txt">
-                    أرض الضيافة للخدمات والتجارة توفر لكم عاملات منزليات محترفات بخبرة عالية في جميع أعمال المنزل، مع عقود شهرية مرنة تناسب احتياجات الأسرة وتضمن لكم الراحة والأمان.
-                </p>
-                <div class="hero-actions">
-                    <a href="#booking" class="btn-primary" id="hero-btn-book">احجز الآن</a>
-                    <a href="tel:+97430207961" class="btn-secondary" id="hero-btn-call">
-                        <svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21.384 17.752a2.108 2.108 0 0 1-.522 1.347c-.521.574-1.393.93-2.127.93-.815 0-1.894-.486-3.328-1.464-1.921-1.31-3.957-3.238-5.59-5.32C8.187 11.163 6.94 9.176 6.136 7.42 5.59 6.223 5.438 5.2 5.69 4.382c.209-.678.718-1.252 1.305-1.74a1.88 1.88 0 0 1 1.252-.45c.427 0 .809.18 1.1.52.484.56.978 1.385 1.365 2.036.21.353.25.7.12 1.03-.13.33-.42.66-.75.99-.21.21-.44.42-.65.65a.51.51 0 0 0-.1.57c.56 1.05 1.54 2.27 2.65 3.38 1.11 1.11 2.33 2.09 3.38 2.65a.51.51 0 0 0 .57-.1c.23-.21.44-.44.65-.65.33-.33.66-.62.99-.75.33-.13.68-.09 1.03.12.65.39 1.48.88 2.04 1.37.34.29.52.67.52 1.1zM24 12c0-6.627-5.373-12-12-12v1.5c5.799 0 10.5 4.701 10.5 10.5H24zM21 12c0-4.97-4.03-9-9-9v1.5c4.142 0 7.5 3.358 7.5 7.5H21z"/>
-                        </svg>
-                        <span>اتصل بنا</span>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Flyer Slider Column -->
-            <div class="hero-slider-col">
-                <div class="slider-wrapper-frame">
-                    <div class="slider-slides" id="hero-slider-slides">
-                        <div class="hero-slide active"><img src="photo/1.jpeg" alt="أرض الضيافة - إعلان 1"></div>
-                        <div class="hero-slide"><img src="photo/2.jpeg" alt="أرض الضيافة - إعلان 2"></div>
-                        <div class="hero-slide"><img src="photo/3.jpeg" alt="أرض الضيافة - إعلان 3"></div>
-                        <div class="hero-slide"><img src="photo/4.jpeg" alt="أرض الضيافة - إعلان 4"></div>
-                        <div class="hero-slide"><img src="photo/5.jpeg" alt="أرض الضيافة - إعلان 5"></div>
+    <!-- Premium Hero Section -->
+    <section class="premium-hero" id="home">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-grid">
+                <!-- Text Column -->
+                <div class="hero-text-block">
+                    <span class="hero-slogan" id="hero-badge-txt">أرض الضيافة للخدمات والتجارة</span>
+                    <h2 class="hero-title" id="hero-main-title">هل تبحث عن الراحة والاهتمام الكامل بمنزلك؟</h2>
+                    <p class="hero-description" id="hero-desc-txt">
+                        نوفر لكم عاملات منزليات محترفات بخبرة عالية في جميع أعمال المنزل، مع عقود شهرية مرنة تناسب احتياجات الأسرة وتضمن لكم خدمة موثوقة وجودة مستمرة في دولة قطر.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="https://wa.me/97430207961" target="_blank" class="btn-hero-primary" id="hero-btn-book">احجز عبر واتساب</a>
+                        <a href="tel:+97430207961" class="btn-hero-secondary" id="hero-btn-call">
+                            <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <span id="hero-btn-call-text">اتصل بنا</span>
+                        </a>
                     </div>
-                    <!-- Small indicators inside the slider -->
-                    <div class="slider-dots" id="hero-slider-dots"></div>
+                </div>
+
+                <!-- Floating Info Card -->
+                <div class="hero-info-card">
+                    <div class="card-header-accent">
+                        <h3 id="card-feature-title">ما الذي يجعلنا مختلفين؟</h3>
+                    </div>
+                    <div class="card-body-content">
+                        <ul class="feature-bullets">
+                            <li>
+                                <svg class="bullet-check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span id="bullet-1">عاملات مدربات وذوات خبرة عالية</span>
+                            </li>
+                            <li>
+                                <svg class="bullet-check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span id="bullet-2">التزام كامل بالمواعيد وجودة مستمرة</span>
+                            </li>
+                            <li>
+                                <svg class="bullet-check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span id="bullet-3">أسعار مناسبة وعقود شهرية مرنة</span>
+                            </li>
+                            <li>
+                                <svg class="bullet-check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span id="bullet-4">دعم وخدمة عملاء على مدار الساعة</span>
+                            </li>
+                        </ul>
+                        <div class="card-footer-action">
+                            <a href="https://wa.me/97430207961" target="_blank" class="card-action-link" id="card-action-text">طلب حجز عاملة منزلية</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Stats Section Row (Horizontal side-by-side layout) -->
+    <section class="stats-counter-section">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label" id="stat-lbl-clients">عملاء سعداء</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label" id="stat-lbl-experience">سنوات الخبرة</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label" id="stat-lbl-trained">عمالة مدربة وموثوقة</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label" id="stat-lbl-support">حجز ودعم مستمر</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Side-by-side with photos, 2 rows layout: 3 + 2) -->
     <section class="services-section" id="services">
         <div class="section-container">
             <div class="section-header">
@@ -105,106 +190,150 @@
                 <p class="section-subtitle" id="services-subtitle-desc">نلبي جميع احتياجات منزلك بدقة وعناية فائقة من خلال فريق متخصص.</p>
             </div>
             
-            <div class="services-grid">
+            <!-- Row 1: 3 cards side-by-side -->
+            <div class="services-row-grid first-row">
                 <!-- Service 1 -->
-                <div class="service-card">
-                    <div class="service-icon-bg">🧹</div>
-                    <h4 class="service-title-text" id="srv-1-title">تنظيف وترتيب المنازل</h4>
-                    <p class="service-desc-text" id="srv-1-desc">تنظيف شامل ودقيق للغرف والصالونات والفلل والشقق لضمان بيئة صحية ومرتبة.</p>
+                <div class="service-image-card">
+                    <div class="card-image-box">
+                        <img src="photo/1.jpeg" alt="تنظيف وترتيب المنازل" loading="lazy">
+                    </div>
+                    <div class="card-content-box">
+                        <h4 class="service-title-text" id="srv-1-title">تنظيف وترتيب المنازل</h4>
+                        <p class="service-desc-text" id="srv-1-desc">تنظيف شامل ودقيق للغرف والصالونات والفلل والشقق لضمان بيئة صحية ومرتبة.</p>
+                    </div>
                 </div>
+                
                 <!-- Service 2 -->
-                <div class="service-card">
-                    <div class="service-icon-bg">👕</div>
-                    <h4 class="service-title-text" id="srv-2-title">غسيل وكي الملابس</h4>
-                    <p class="service-desc-text" id="srv-2-desc">الاعتناء بملابسك وغسلها وكيها بطرق احترافية تحافظ على جودتها وأناقتها.</p>
+                <div class="service-image-card">
+                    <div class="card-image-box">
+                        <img src="photo/2.jpeg" alt="غسيل وكي الملابس" loading="lazy">
+                    </div>
+                    <div class="card-content-box">
+                        <h4 class="service-title-text" id="srv-2-title">غسيل وكي الملابس</h4>
+                        <p class="service-desc-text" id="srv-2-desc">الاعتناء بملابسك وغسلها وكيها بطرق احترافية تحافظ على جودتها وأناقتها.</p>
+                    </div>
                 </div>
+
                 <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="service-icon-bg">🍳</div>
-                    <h4 class="service-title-text" id="srv-3-title">تنظيف المطابخ والحمامات</h4>
-                    <p class="service-desc-text" id="srv-3-desc">تعقيم وتنظيف عميق للمطابخ وإزالة الدهون، وتطهير الحمامات بأفضل المعقمات.</p>
+                <div class="service-image-card">
+                    <div class="card-image-box">
+                        <img src="photo/3.jpeg" alt="تنظيف المطابخ والحمامات" loading="lazy">
+                    </div>
+                    <div class="card-content-box">
+                        <h4 class="service-title-text" id="srv-3-title">تنظيف المطابخ والحمامات</h4>
+                        <p class="service-desc-text" id="srv-3-desc">تعقيم وتنظيف عميق للمطابخ وإزالة الدهون، وتطهير الحمامات بأفضل المعقمات والمنظفات.</p>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Row 2: 2 cards side-by-side -->
+            <div class="services-row-grid second-row">
                 <!-- Service 4 -->
-                <div class="service-card">
-                    <div class="service-icon-bg">🏡</div>
-                    <h4 class="service-title-text" id="srv-4-title">العناية اليومية بالمنزل</h4>
-                    <p class="service-desc-text" id="srv-4-desc">ترتيب يومي ومتابعة مستمرة لتفاصيل المنزل ليبقى دائماً مهيأً لاستقبال عائلتك وضيوفتك.</p>
+                <div class="service-image-card">
+                    <div class="card-image-box">
+                        <img src="photo/4.jpeg" alt="العناية اليومية بالمنزل" loading="lazy">
+                    </div>
+                    <div class="card-content-box">
+                        <h4 class="service-title-text" id="srv-4-title">العناية اليومية بالمنزل</h4>
+                        <p class="service-desc-text" id="srv-4-desc">ترتيب يومي ومتابعة مستمرة لتفاصيل المنزل ليبقى دائماً مهيأً لاستقبال عائلتك وضيوفتك.</p>
+                    </div>
                 </div>
+
                 <!-- Service 5 -->
-                <div class="service-card">
-                    <div class="service-icon-bg">🤝</div>
-                    <h4 class="service-title-text" id="srv-5-title">الأعمال المنزلية المختلفة</h4>
-                    <p class="service-desc-text" id="srv-5-desc">مساعدة مرنة في شتى المهام المنزلية التي تطلبها الأسرة لتوفير الوقت والجهد.</p>
+                <div class="service-image-card">
+                    <div class="card-image-box">
+                        <img src="photo/5.jpeg" alt="الأعمال المنزلية المختلفة" loading="lazy">
+                    </div>
+                    <div class="card-content-box">
+                        <h4 class="service-title-text" id="srv-5-title">الأعمال المنزلية المختلفة</h4>
+                        <p class="service-desc-text" id="srv-5-desc">مساعدة مرنة في شتى المهام المنزلية التي تطلبها الأسرة لتوفير الوقت والجهد للجميع.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Us Section (Features) -->
-    <section class="features-section" id="why-us">
+    <!-- Why Us Section (All cards side-by-side horizontally, text centered) -->
+    <section class="why-us-section" id="why-us">
         <div class="section-container">
             <div class="section-header">
                 <span class="section-badge" id="why-us-badge">لماذا تختارنا</span>
-                <h3 class="section-title text-white" id="why-us-title">مميزات الخدمة في أرض الضيافة</h3>
-                <p class="section-subtitle text-light-blue" id="why-us-desc">نسعى دائماً لتقديم الأفضل لعملائنا لضمان رضاهم التام واستمرارية الخدمة.</p>
+                <h3 class="why-us-title" id="why-us-title">الريادة في تقديم الخدمات المنزلية</h3>
+                <p class="why-us-desc" id="why-us-desc">
+                    في أرض الضيافة للخدمات والتجارة، نبني جسور الثقة والالتزام. نحن لسنا مجرد مزود خدمات، بل شركاء في توفير الراحة والأمان لعائلتك في دولة قطر من خلال كفاءات مدربة بأعلى المعايير.
+                </p>
             </div>
-            
-            <div class="features-grid">
-                <!-- Feature 1 -->
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
+
+            <!-- Features Cards - 4 columns side-by-side, text centered -->
+            <div class="why-us-horizontal-grid">
+                <!-- Feature Card 1 -->
+                <div class="why-horizontal-card">
+                    <div class="why-card-icon-wrapper">
+                        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
                     <h4 id="feat-1-title">عاملات مدربات وخبرة</h4>
-                    <p id="feat-1-desc">عاملات منزليات يمتلكن المهارة والكفاءة العالية في إدارة وتنظيف المنازل والتعامل اللبق.</p>
+                    <p id="feat-1-desc">عاملات يمتلكن المهارة والكفاءة العالية في التنظيف والترتيب وإدارة المنزل بلباقة تامة.</p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="feature-card">
-                    <div class="feature-icon">⏰</div>
+
+                <!-- Feature Card 2 -->
+                <div class="why-horizontal-card">
+                    <div class="why-card-icon-wrapper">
+                        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
                     <h4 id="feat-2-title">التزام كامل بالمواعيد</h4>
-                    <p id="feat-2-desc">نحترم وقتكم الثمين، ونلتزم بالوصول وتأدية المهام المطلوبة في الوقت المحدد تماماً.</p>
+                    <p id="feat-2-desc">نحترم وقتكم الثمين، ونلتزم بالوصول والانتهاء من المهام المطلوبة في الموعد المحدد.</p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
+
+                <!-- Feature Card 3 -->
+                <div class="why-horizontal-card">
+                    <div class="why-card-icon-wrapper">
+                        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                        </svg>
+                    </div>
                     <h4 id="feat-3-title">خدمة احترافية وجودة</h4>
-                    <p id="feat-3-desc">نهتم بأدق التفاصيل ونستخدم أحدث الطرق لضمان جودة مستمرة تنال ثقتكم.</p>
+                    <p id="feat-3-desc">نهتم بأدق التفاصيل لتقديم تجربة تنظيف فاخرة تنال ثقتكم وتضمن راحتكم المستمرة.</p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h4 id="feat-4-title">أسعار مناسبة وعقود مرنة</h4>
-                    <p id="feat-4-desc">عقود شهرية مرنة وباقات متنوعة تلائم ميزانيتك وااحتياجات أسرتك الخاصة.</p>
-                </div>
-                <!-- Feature 5 -->
-                <div class="feature-card">
-                    <div class="feature-icon">📞</div>
-                    <h4 id="feat-5-title">دعم عملاء 24/7</h4>
-                    <p id="feat-5-desc">فريق دعم متواجد على مدار الساعة للرد على استفساراتكم وتلبية طلباتكم فوراً.</p>
+
+                <!-- Feature Card 4 -->
+                <div class="why-horizontal-card">
+                    <div class="why-card-icon-wrapper">
+                        <svg class="why-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h4 id="feat-4-title">أسعار وعقود مرنة</h4>
+                    <p id="feat-4-desc">باقات تعاقد شهرية متنوعة وخطط أسعار مرنة تتناسب تماماً مع متطلبات وميزانية أسرتك.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Visual Image Gallery Section -->
+    <!-- Visual Image Gallery Section (Ads Gallery Side-by-Side Horizontal Row) -->
     <section class="gallery-section" id="gallery">
         <div class="section-container">
             <div class="section-header">
-                <span class="section-badge" id="gallery-badge">معرض الصور</span>
+                <span class="section-badge" id="gallery-badge">معرض الإعلانات</span>
                 <h3 class="section-title" id="gallery-title">معرض الإعلانات والخدمات</h3>
                 <p class="section-subtitle" id="gallery-subtitle">تصفح إعلاناتنا وعروضنا الحالية لخدمات العمالة المنزلية في دولة قطر.</p>
             </div>
             
             <div class="carousel-container">
                 <div class="carousel-track" id="carousel-track">
-                    <div class="carousel-slide"><img src="photo/1.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/2.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/3.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/4.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/5.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/6.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/7.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/8.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/9.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>
-                    <div class="carousel-slide"><img src="photo/10.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="photo/1.jpeg" alt="إعلان أرض الضيافة - 1" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="photo/2.jpeg" alt="إعلان أرض الضيافة - 2" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="photo/3.jpeg" alt="إعلان أرض الضيافة - 3" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="photo/4.jpeg" alt="إعلان أرض الضيافة - 4" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="photo/5.jpeg" alt="إعلان أرض الضيافة - 5" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="photo/6.jpeg" alt="إعلان أرض الضيافة - 6" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="photo/7.jpeg" alt="إعلان أرض الضيافة - 7" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="photo/8.jpeg" alt="إعلان أرض الضيافة - 8" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="photo/9.jpeg" alt="إعلان أرض الضيافة - 9" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="photo/10.jpeg" alt="إعلان أرض الضيافة - 10" loading="lazy"></div>
                 </div>
                 
                 <!-- Controls -->
@@ -217,105 +346,66 @@
         </div>
     </section>
 
-    <!-- Booking Form & Direct Contacts Section -->
+    <!-- Clean Contacts Section (Replaced Booking Form) -->
     <section class="booking-section" id="booking">
         <div class="booking-container">
-            <div class="booking-grid">
-                <!-- Info Column -->
-                <div class="booking-info">
-                    <span class="booking-badge" id="book-badge-txt">احجز موعدك اليوم</span>
-                    <h3 class="booking-info-title" id="book-info-title">ابدأ رحلة الراحة في منزلك</h3>
-                    <p class="booking-info-desc" id="book-info-desc">
-                        أرض الضيافة للخدمات والتجارة - خبرة، ثقة، وراحة تبدأ من منزلك. يمكنك ملء النموذج وسيقوم نظامنا بتوجيهك فوراً لإرسال حجزك عبر الواتساب، أو الاتصال بنا مباشرة.
-                    </p>
-                    
-                    <div class="contact-card-list">
-                        <div class="contact-card-item">
-                            <div class="contact-card-icon">📞</div>
-                            <div class="contact-card-content">
-                                <span class="contact-card-label" id="phone-label-1">للحجز والاستفسار (هاتف 1):</span>
-                                <a href="tel:+97430207961" class="contact-card-value">30207961</a>
-                            </div>
+            <div class="booking-info-standalone">
+                <span class="booking-badge" id="book-badge-txt">اتصل بنا اليوم</span>
+                <h3 class="booking-info-title" id="book-info-title">ابدأ رحلة الراحة والأمان في منزلك</h3>
+                <p class="booking-info-desc" id="book-info-desc">
+                    أرض الضيافة للخدمات والتجارة - خبرة، ثقة، وراحة تبدأ من منزلك. اتصل بنا مباشرة أو راسلنا عبر الواتساب لتأكيد الحجز فوراً وتنسيق العقد الشهري الذي يناسبك.
+                </p>
+                
+                <div class="contact-cards-horizontal-grid">
+                    <div class="contact-card-item">
+                        <div class="contact-card-icon">
+                            <svg class="contact-svg-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
                         </div>
-                        <div class="contact-card-item">
-                            <div class="contact-card-icon">📞</div>
-                            <div class="contact-card-content">
-                                <span class="contact-card-label" id="phone-label-2">للحجز والاستفسار (هاتف 2):</span>
-                                <a href="tel:+97455487821" class="contact-card-value">55487821</a>
-                            </div>
-                        </div>
-                        <div class="contact-card-item">
-                            <div class="contact-card-icon">📍</div>
-                            <div class="contact-card-content">
-                                <span class="contact-card-label" id="location-label">نطاق الخدمة:</span>
-                                <span class="contact-card-value" id="location-value">جميع مناطق دولة قطر</span>
-                            </div>
+                        <div class="contact-card-content">
+                            <span class="contact-card-label" id="phone-label-1">للحجز والاستفسار (هاتف 1):</span>
+                            <a href="tel:+97430207961" class="contact-card-value">30207961</a>
                         </div>
                     </div>
-                    
-                    <div class="quick-call-actions">
-                        <a href="tel:+97430207961" class="quick-btn call-btn">
-                            📞 اتصل بنا الآن
-                        </a>
-                        <a href="https://wa.me/97430207961?text=مرحباً%20أرض%20الضيافة%20أود%20الاستفسار%20عن%20العاملات%20المنزليات" target="_blank" class="quick-btn whatsapp-direct-btn">
-                            💬 راسلنا واتساب
-                        </a>
+
+                    <div class="contact-card-item">
+                        <div class="contact-card-icon">
+                            <svg class="contact-svg-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <span class="contact-card-label" id="phone-label-2">للحجز والاستفسار (هاتف 2):</span>
+                            <a href="tel:+97455487821" class="contact-card-value">55487821</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-item">
+                        <div class="contact-card-icon">
+                            <svg class="contact-svg-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <span class="contact-card-label" id="location-label">نطاق تقديم الخدمة:</span>
+                            <span class="contact-card-value" id="location-value">جميع مناطق دولة قطر</span>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Form Column -->
-                <div class="booking-form-wrapper">
-                    <h4 class="form-title" id="form-title-txt">نموذج حجز عاملة منزلية</h4>
-                    <p class="form-subtitle" id="form-subtitle-txt">يرجى إدخال بياناتك وسنتواصل معك لتأكيد العقد</p>
-                    
-                    <form id="maid-booking-form" novalidate>
-                        <div class="form-group">
-                            <label for="client-name" id="label-name">الاسم بالكامل *</label>
-                            <input type="text" id="client-name" placeholder="أدخل اسمك الكريم" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="client-phone" id="label-phone">رقم الجوال (في قطر) *</label>
-                            <input type="tel" id="client-phone" placeholder="مثال: 30207961" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service-type" id="label-service">الخدمة المطلوبة *</label>
-                            <select id="service-type" required>
-                                <option value="" disabled selected id="opt-select">اختر الخدمة...</option>
-                                <option value="cleaning" id="opt-1">تنظيف وترتيب المنازل والفلل</option>
-                                <option value="laundry" id="opt-2">غسيل وكي الملابس</option>
-                                <option value="kitchen" id="opt-3">تنظيف وتعقيم المطابخ والحمامات</option>
-                                <option value="full-care" id="opt-4">العناية اليومية المتكاملة بالمنزل</option>
-                                <option value="other" id="opt-5">مساعدة عامة في الأعمال المنزلية</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="contract-duration" id="label-duration">مدة العقد المفضلة *</label>
-                            <select id="contract-duration" required>
-                                <option value="1-month" id="dur-1" selected>عقد شهري (شهر واحد قابل للتجديد)</option>
-                                <option value="3-months" id="dur-2">عقد 3 أشهر</option>
-                                <option value="6-months" id="dur-3">عقد 6 أشهر</option>
-                                <option value="12-months" id="dur-4">عقد سنوي (12 شهر)</option>
-                            </select>
-                        </div>
-                        
-                        <button type="submit" class="form-submit-btn" id="btn-submit-booking">
-                            <span>تأكيد الحجز عبر واتساب</span>
-                            <svg class="submit-btn-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </button>
-                        <span class="booking-error-msg" id="booking-error">يرجى تعبئة جميع الحقول المطلوبة بشكل صحيح.</span>
-                    </form>
+                <div class="booking-centered-actions">
+                    <a href="tel:+97430207961" class="booking-action-btn phone-call-btn" id="lbl-quick-call">
+                        اتصل بنا الآن
+                    </a>
+                    <a href="https://wa.me/97430207961?text=مرحباً%20أرض%20الضيافة" target="_blank" class="booking-action-btn whatsapp-send-btn" id="lbl-quick-whatsapp">
+                        راسلنا واتساب
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Toast Notifications Container -->
-    <div id="toast-notification-root" class="toast-root" role="alert" aria-live="assertive"></div>
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -332,8 +422,7 @@
                         <li><a href="#home" id="lnk-home">الرئيسية</a></li>
                         <li><a href="#services" id="lnk-services">خدماتنا</a></li>
                         <li><a href="#why-us" id="lnk-why">مميزاتنا</a></li>
-                        <li><a href="#gallery" id="lnk-gallery">معرض الصور</a></li>
-                        <li><a href="#booking" id="lnk-book">احجز الآن</a></li>
+                        <li><a href="#gallery" id="lnk-gallery">معرض الإعلانات</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
