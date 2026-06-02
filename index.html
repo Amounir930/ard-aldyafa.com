@@ -43,7 +43,6 @@
             <div class="logo-wrapper">
                 <img src="logo.png" alt="أرض الضيافة للخدمات والتجارة" class="nav-logo">
                 <div class="logo-info">
-                    <h1 class="logo-text-title" id="nav-title">أرض الضيافة</h1>
                     <span class="logo-text-sub" id="nav-subtitle">للخدمات والتجارة</span>
                 </div>
             </div>
@@ -59,17 +58,11 @@
         </div>
     </header>
 
-    <!-- Hero Section with Background Slider -->
-    <section class="hero-section" id="home">
-        <div class="hero-slider-bg">
-            <div class="slide active" style="background-image: linear-gradient(rgba(15, 117, 189, 0.45), rgba(53, 59, 144, 0.85)), url('photo/1.jpeg');"></div>
-            <div class="slide" style="background-image: linear-gradient(rgba(15, 117, 189, 0.45), rgba(53, 59, 144, 0.85)), url('photo/2.jpeg');"></div>
-            <div class="slide" style="background-image: linear-gradient(rgba(15, 117, 189, 0.45), rgba(53, 59, 144, 0.85)), url('photo/3.jpeg');"></div>
-            <div class="slide" style="background-image: linear-gradient(rgba(15, 117, 189, 0.45), rgba(53, 59, 144, 0.85)), url('photo/4.jpeg');"></div>
-            <div class="slide" style="background-image: linear-gradient(rgba(15, 117, 189, 0.45), rgba(53, 59, 144, 0.85)), url('photo/5.jpeg');"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-container">
+    <!-- Split Hero Section -->
+    <section class="split-hero" id="home">
+        <div class="hero-split-container">
+            <!-- Text Content Column -->
+            <div class="hero-text-col">
                 <span class="hero-badge" id="hero-badge-txt">✨ خدمة موثوقة وجودة مستمرة في قطر</span>
                 <h2 class="hero-title" id="hero-main-title">هل تبحث عن الراحة والاهتمام الكامل بمنزلك؟</h2>
                 <p class="hero-subtitle" id="hero-desc-txt">
@@ -83,6 +76,21 @@
                         </svg>
                         <span>اتصل بنا</span>
                     </a>
+                </div>
+            </div>
+            
+            <!-- Flyer Slider Column -->
+            <div class="hero-slider-col">
+                <div class="slider-wrapper-frame">
+                    <div class="slider-slides" id="hero-slider-slides">
+                        <div class="hero-slide active"><img src="photo/1.jpeg" alt="أرض الضيافة - إعلان 1"></div>
+                        <div class="hero-slide"><img src="photo/2.jpeg" alt="أرض الضيافة - إعلان 2"></div>
+                        <div class="hero-slide"><img src="photo/3.jpeg" alt="أرض الضيافة - إعلان 3"></div>
+                        <div class="hero-slide"><img src="photo/4.jpeg" alt="أرض الضيافة - إعلان 4"></div>
+                        <div class="hero-slide"><img src="photo/5.jpeg" alt="أرض الضيافة - إعلان 5"></div>
+                    </div>
+                    <!-- Small indicators inside the slider -->
+                    <div class="slider-dots" id="hero-slider-dots"></div>
                 </div>
             </div>
         </div>
@@ -164,7 +172,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">💰</div>
                     <h4 id="feat-4-title">أسعار مناسبة وعقود مرنة</h4>
-                    <p id="feat-4-desc">عقود شهرية مرنة وباقات متنوعة تلائم ميزانيتك واحتياجات أسرتك الخاصة.</p>
+                    <p id="feat-4-desc">عقود شهرية مرنة وباقات متنوعة تلائم ميزانيتك وااحتياجات أسرتك الخاصة.</p>
                 </div>
                 <!-- Feature 5 -->
                 <div class="feature-card">
@@ -181,13 +189,12 @@
         <div class="section-container">
             <div class="section-header">
                 <span class="section-badge" id="gallery-badge">معرض الصور</span>
-                <h3 class="section-title" id="gallery-title">عاملاتنا في العمل</h3>
-                <p class="section-subtitle" id="gallery-subtitle">لقطات حية لعاملاتنا المحترفات وهن يؤدين الأعمال المنزلية بأعلى معايير الإتقان.</p>
+                <h3 class="section-title" id="gallery-title">معرض الإعلانات والخدمات</h3>
+                <p class="section-subtitle" id="gallery-subtitle">تصفح إعلاناتنا وعروضنا الحالية لخدمات العمالة المنزلية في دولة قطر.</p>
             </div>
             
             <div class="carousel-container">
                 <div class="carousel-track" id="carousel-track">
-                    <!-- Images will be injected or hardcoded here -->
                     <div class="carousel-slide"><img src="photo/1.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>
                     <div class="carousel-slide"><img src="photo/2.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>
                     <div class="carousel-slide"><img src="photo/3.jpeg" alt="عاملة منزلية - أرض الضيافة" loading="lazy"></div>

@@ -4,7 +4,6 @@
 const translations = {
     ar: {
         title: "أرض الضيافة | عاملات وخادمات منزليات بعقود شهرية في قطر",
-        navTitle: "أرض الضيافة",
         navSubtitle: "للخدمات والتجارة",
         navCtaText: "احجز الآن",
         heroBadge: "✨ خدمة موثوقة وجودة مستمرة في قطر",
@@ -39,8 +38,8 @@ const translations = {
         feat5Title: "دعم عملاء 24/7",
         feat5Desc: "فريق دعم متواجد على مدار الساعة للرد على استفساراتكم وتلبية طلباتكم فوراً.",
         galleryBadge: "معرض الصور",
-        galleryTitle: "عاملاتنا في العمل",
-        gallerySubtitle: "لقطات حية لعاملاتنا المحترفات وهن يؤدين الأعمال المنزلية بأعلى معايير الإتقان.",
+        galleryTitle: "معرض الإعلانات والخدمات",
+        gallerySubtitle: "تصفح إعلاناتنا وعروضنا الحالية لخدمات العمالة المنزلية في دولة قطر.",
         bookBadgeTxt: "احجز موعدك اليوم",
         bookInfoTitle: "ابدأ رحلة الراحة في منزلك",
         bookInfoDesc: "أرض الضيافة للخدمات والتجارة - خبرة، ثقة، وراحة تبدأ من منزلك. يمكنك ملء النموذج وسيقوم نظامنا بتوجيهك فوراً لإرسال حجزك عبر الواتساب، أو الاتصال بنا مباشرة.",
@@ -84,7 +83,6 @@ const translations = {
     },
     en: {
         title: "Ard Al-Dyafa | Domestic Maids & Workers Monthly Contracts in Qatar",
-        navTitle: "Ard Al-Dyafa",
         navSubtitle: "for Services & Trade",
         navCtaText: "Book Now",
         heroBadge: "✨ Reliable Service and Continuous Quality in Qatar",
@@ -119,8 +117,8 @@ const translations = {
         feat5Title: "24/7 Customer Support",
         feat5Desc: "A dedicated support team active round the clock to respond to your queries and manage requests instantly.",
         galleryBadge: "Photo Gallery",
-        galleryTitle: "Our Workers in Action",
-        gallerySubtitle: "Live snapshots showcasing our professional maids performing household chores with extreme dedication.",
+        galleryTitle: "Ads & Services Exhibition",
+        gallerySubtitle: "Browse our current flyers and announcements for domestic maid services in the State of Qatar.",
         bookBadgeTxt: "Book Your Slot Today",
         bookInfoTitle: "Start Your Home Comfort Journey",
         bookInfoDesc: "Ard Al-Dyafa for Services & Trade - Experience, trust, and comfort starting from your home. Fill in the form and our system will route you to WhatsApp to send your request, or call us directly.",
@@ -169,6 +167,7 @@ let currentLang = localStorage.getItem('ard_dyafa_lang') || 'ar';
 let activeHeroSlide = 0;
 let activeGallerySlide = 0;
 const phoneList = ["97430207961", "97455487821"];
+let heroInterval;
 
 // DOM Elements
 const langToggleBtn = document.getElementById('lang-toggle-btn');
@@ -176,7 +175,6 @@ const maidForm = document.getElementById('maid-booking-form');
 
 // Elements that require translation
 const translatableElements = {
-    'nav-title': 'navTitle',
     'nav-subtitle': 'navSubtitle',
     'nav-cta-text': 'navCtaText',
     'hero-badge-txt': 'heroBadge',
@@ -270,7 +268,6 @@ function applyLanguage(lang) {
         const element = document.getElementById(elementId);
         if (element) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                // If it has placeholder translating capability
                 if (key === 'labelName') element.placeholder = translations[lang].placeholderName;
                 if (key === 'labelPhone') element.placeholder = translations[lang].placeholderPhone;
             } else if (elementId === 'btn-submit-booking') {
@@ -322,14 +319,54 @@ function initNavbarScroll() {
 
 // Hero background slider logic
 function initHeroSlider() {
-    const slides = document.querySelectorAll('.hero-slider-bg .slide');
+    const slides = document.querySelectorAll('#hero-slider-slides .hero-slide');
+    const dotsContainer = document.getElementById('hero-slider-dots');
     if (slides.length === 0) return;
     
-    setInterval(() => {
+    // Create dots
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.className = `slider-dot ${idx === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Flyer slide ${idx + 1}`);
+        dot.addEventListener('click', () => {
+            goToHeroSlide(idx);
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    function nextHeroSlide() {
         slides[activeHeroSlide].classList.remove('active');
         activeHeroSlide = (activeHeroSlide + 1) % slides.length;
         slides[activeHeroSlide].classList.add('active');
-    }, 5500);
+        updateHeroDots();
+    }
+
+    function goToHeroSlide(idx) {
+        clearInterval(heroInterval);
+        slides[activeHeroSlide].classList.remove('active');
+        activeHeroSlide = idx;
+        slides[activeHeroSlide].classList.add('active');
+        updateHeroDots();
+        startHeroInterval();
+    }
+
+    function updateHeroDots() {
+        const dots = document.querySelectorAll('#hero-slider-dots .slider-dot');
+        dots.forEach((dot, idx) => {
+            if (idx === activeHeroSlide) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    function startHeroInterval() {
+        heroInterval = setInterval(nextHeroSlide, 5000);
+    }
+
+    startHeroInterval();
 }
 
 // Photo Gallery Carousel slider logic
@@ -387,7 +424,6 @@ function initGalleryCarousel() {
         if (touchStartX - touchEndX > threshold) {
             // Swiped left
             if (dir === 'rtl') {
-                // Next in RTL is moving left
                 prevSlide();
             } else {
                 nextSlide();
@@ -426,14 +462,8 @@ function updateGallerySliderPosition() {
     
     const dir = document.documentElement.getAttribute('dir') || 'rtl';
     
-    // In RTL, the translation can behave differently depending on layout structure.
-    // For standard CSS flex rows, translating negative percentages works consistently
-    // if flex container direction handles RTL naturally.
-    // However, translating negative percentage shifts view to the right in LTR and left in RTL.
-    // Let's use simple coordinate calculations based on active slide:
     track.style.transform = `translateX(-${activeGallerySlide * 100}%)`;
     if (dir === 'rtl') {
-        // Correcting transition direction for RTL
         track.style.transform = `translateX(${activeGallerySlide * 100}%)`;
     }
 
@@ -493,8 +523,6 @@ maidForm.addEventListener('submit', (e) => {
                   `Date of Request: ${new Date().toLocaleDateString('en-US')}`;
     }
     
-    // Choose phone number rotation or use the first active phone number
-    // Let's use 30207961 (or rotatively)
     const targetPhone = phoneList[Math.floor(Math.random() * phoneList.length)];
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${targetPhone}&text=${encodeURIComponent(message)}`;
     
