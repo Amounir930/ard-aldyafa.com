@@ -3,7 +3,7 @@
 // Translation Dictionary
 const translations = {
     ar: {
-        title: "أرض الضيافة | عاملات وخادمات منزليات بعقود شهرية في قطر - 55487821",
+        title: "أرض الضيافة | عاملات وخادمات منزليات بعقود شهرية في قطر - 30207961",
         topBarZone: "قطر",
         topPhoneLabel: "اتصل بنا: ",
         navSubtitle: "للخدمات والتجارة",
@@ -76,7 +76,7 @@ const translations = {
         langBtnText: "English"
     },
     en: {
-        title: "Ard Al-Dyafa | Domestic Maids & Workers Monthly Contracts in Qatar - 55487821",
+        title: "Ard Al-Dyafa | Domestic Maids & Workers Monthly Contracts in Qatar - 30207961",
         topBarZone: "Qatar",
         topPhoneLabel: "Call: ",
         navSubtitle: "for Services & Trade",
@@ -235,7 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
     applyLanguage(currentLang);
     initGalleryCarousel();
     initNavbarScroll();
-    initAnnouncementMarquee();
 });
 
 // Localization logic
@@ -284,14 +283,7 @@ function initNavbarScroll() {
     });
 }
 
-// Hover play/pause for marquee announcement
-function initAnnouncementMarquee() {
-    const marquee = document.getElementById('announcement-marquee');
-    if (marquee) {
-        marquee.addEventListener('mouseover', () => marquee.stop());
-        marquee.addEventListener('mouseout', () => marquee.start());
-    }
-}
+
 
 // Photo Gallery Carousel slider logic
 let slidesNode = [];

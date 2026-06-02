@@ -90,7 +90,20 @@ a {
 
 .top-bar-marquee {
     flex: 1;
-    min-width: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    direction: ltr;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 25s linear infinite;
+}
+
+.top-bar-marquee:hover .marquee-track {
+    animation-play-state: paused;
 }
 
 .announcement-text {
@@ -98,8 +111,18 @@ a {
     font-weight: 600;
     color: var(--text-light);
     white-space: nowrap;
-    padding-top: 0.2rem;
-    display: block;
+    padding: 0 4rem;
+    direction: rtl;
+    display: inline-block;
+}
+
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .top-bar-phone {
