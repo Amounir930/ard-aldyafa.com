@@ -271,11 +271,14 @@ function applyLanguage(lang) {
     // Change document title
     document.title = translations[lang].title;
 
-    // Apply translations to all mapped elements
-    for (const [elementId, key] of Object.entries(translatableElements)) {
-        const element = document.getElementById(elementId);
-        if (element) {
-            element.innerHTML = translations[lang][key];
+    // Apply translations to all mapped elements (using standard loop for maximum browser compatibility)
+    for (const elementId in translatableElements) {
+        if (translatableElements.hasOwnProperty(elementId)) {
+            const key = translatableElements[elementId];
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.innerHTML = translations[lang][key];
+            }
         }
     }
 
@@ -327,17 +330,18 @@ function initGalleryCarousel() {
     if (slidesNode.length === 0) return;
     if (!track || !prevBtn || !nextBtn || !indicatorsContainer) return;
     
-    // Create Indicators
+    // Create Indicators (using standard loop to prevent NodeList.forEach compatibility issues on older devices)
     indicatorsContainer.innerHTML = '';
-    slidesNode.forEach((_, index) => {
+    for (let index = 0; index < slidesNode.length; index++) {
         const indicator = document.createElement('button');
         indicator.className = `indicator ${index === 0 ? 'active' : ''}`;
         indicator.setAttribute('aria-label', `Go to slide ${index + 1}`);
+        const idx = index;
         indicator.addEventListener('click', () => {
-            goToGallerySlide(index);
+            goToGallerySlide(idx);
         });
         indicatorsContainer.appendChild(indicator);
-    });
+    }
 
     nextBtn.addEventListener('click', () => {
         let target = activeGallerySlide + 1;
@@ -412,15 +416,16 @@ function updateGallerySliderPosition() {
         track.style.transform = `translateX(${activeGallerySlide * 100}%)`;
     }
 
-    // Update indicators
+    // Update indicators (using standard loop for older browser support)
     const indicators = document.querySelectorAll('.carousel-indicators .indicator');
-    indicators.forEach((indicator, index) => {
+    for (let index = 0; index < indicators.length; index++) {
+        const indicator = indicators[index];
         if (index === activeGallerySlide) {
             indicator.classList.add('active');
         } else {
             indicator.classList.remove('active');
         }
-    });
+    }
 }
 
 // Custom Toast
