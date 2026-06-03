@@ -1,0 +1,265 @@
+/* 🎨 responsive.css - Optimized Mobile & Tablet Responsive Media Queries */
+
+@media (max-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .hero-text-block {
+        align-items: center;
+        text-align: center;
+    }
+    .hero-actions {
+        justify-content: center;
+        width: 100%;
+    }
+    .services-row-grid.first-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .services-row-grid.second-row {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+    }
+    .why-us-horizontal-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    .stat-item {
+        border-left: none;
+    }
+    .contact-cards-horizontal-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: sticky;
+        top: 0;
+    }
+    .nav-container {
+        display: grid;
+        grid-template-areas: 
+            "actions logo"
+            "menu menu";
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        row-gap: 0.75rem;
+        padding: 0.75rem 1rem;
+    }
+    
+    html[lang="en"] .nav-container {
+        grid-template-areas: 
+            "logo actions"
+            "menu menu";
+        grid-template-columns: 1fr auto;
+    }
+
+    .logo-wrapper {
+        grid-area: logo;
+        justify-self: end;
+    }
+
+    html[lang="en"] .logo-wrapper {
+        justify-self: start;
+    }
+
+    .nav-logo {
+        height: 50px;
+        width: auto;
+    }
+
+    .logo-text-sub {
+        font-size: 0.75rem;
+    }
+
+    .nav-actions {
+        grid-area: actions;
+        justify-self: start;
+        gap: 0.75rem;
+    }
+
+    html[lang="en"] .nav-actions {
+        justify-self: end;
+    }
+
+    .lang-btn-nav {
+        padding: 0.35rem 0.85rem;
+        font-size: 0.8rem;
+    }
+
+    .nav-cta-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .whatsapp-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .nav-links-wrapper {
+        grid-area: menu;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-top: 1px solid var(--border-light);
+        padding-top: 0.5rem;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+        width: 100%;
+    }
+
+    .nav-menu li a {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    /* Refactored grids under 768px (inherited cleanly by smaller screens, no duplication) */
+    .services-row-grid.first-row,
+    .services-row-grid.second-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        max-width: 100%;
+    }
+    .stats-counter-section {
+        padding: 2rem 1.25rem;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .why-us-horizontal-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .contact-cards-horizontal-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .top-bar {
+        padding: 0.5rem 1rem;
+    }
+    .top-bar-container {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    .top-bar-info {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    .premium-hero {
+        padding: 3rem 1rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+    .stat-number {
+        font-size: 1.25rem;
+    }
+    .stat-label {
+        font-size: 0.65rem;
+    }
+    .stat-item {
+        border-left: none;
+    }
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+    .services-section,
+    .why-us-section,
+    .gallery-section,
+    .booking-section {
+        padding: 4rem 1.25rem;
+    }
+    .carousel-container {
+        aspect-ratio: 4 / 5;
+    }
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .contact-card-item {
+        padding: 1.25rem 1.5rem;
+        gap: 1.25rem;
+        text-align: right;
+    }
+    html[dir="ltr"] .contact-card-item {
+        text-align: left;
+    }
+    .contact-card-value {
+        font-size: 1.1rem;
+    }
+    .contact-card-label {
+        font-size: 0.85rem;
+    }
+    .contact-card-icon {
+        width: 45px;
+        height: 45px;
+    }
+    .contact-svg-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .booking-centered-actions {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    .booking-action-btn {
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .why-us-horizontal-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    .stat-number {
+        font-size: 1.25rem;
+    }
+    .stat-label {
+        font-size: 0.65rem;
+    }
+    .services-row-grid.first-row,
+    .services-row-grid.second-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

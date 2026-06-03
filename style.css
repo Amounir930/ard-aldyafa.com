@@ -1,73 +1,4 @@
-/* 🎨 Ard Al-Dyafa - Premium Corporate Identity Stylesheet */
-
-/* Design Tokens & Root Custom Properties */
-:root {
-    --primary-blue: #0f75bd;
-    --primary-blue-hover: #0c62a1;
-    --navy-dark: #0c1b40;
-    --navy-medium: #1a2b5c;
-    --navy-light: #253a74;
-    --accent-gold: #d4af37;
-    --accent-gold-hover: #b59410;
-    --gold-light: #fcf8ee;
-    --gold-border: rgba(212, 175, 55, 0.3);
-    
-    /* Neutrals */
-    --bg-white: #ffffff;
-    --bg-light: #f8fafc;
-    --bg-slate: #f1f5f9;
-    --text-dark: #0c1b40;
-    --text-slate: #334155;
-    --text-muted: #64748b;
-    --text-light: #f1f5f9;
-    --text-blue-light: #d1dbed;
-    
-    /* Layout Tokens */
-    --border-color: #cbd5e1;
-    --border-light: #e2e8f0;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -1px rgba(0,0,0,0.04);
-    --shadow-lg: 0 10px 25px -5px rgba(12, 27, 64, 0.1), 0 8px 10px -6px rgba(12, 27, 64, 0.05);
-    --shadow-premium: 0 20px 40px rgba(12, 27, 64, 0.12);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --border-radius: 12px;
-}
-
-/* Reset & Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--bg-light);
-    color: var(--text-slate);
-    font-family: 'Cairo', sans-serif;
-    line-height: 1.6;
-}
-
-/* Direction Alignment */
-html[lang="en"] body {
-    font-family: 'Outfit', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: var(--text-dark);
-    font-weight: 700;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: var(--transition-smooth);
-}
+/* 🎨 style.css - Component Layouts & Desktop Presentation Styles */
 
 /* Top Info Bar */
 .top-bar {
@@ -89,15 +20,6 @@ a {
     gap: 2rem;
 }
 
-/*.top-bar-marquee {
-    flex: 1;
-    min-width: 0;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    direction: ltr;
-}*/
 .top-bar-marquee {
     flex: 1;
     min-width: 0;
@@ -163,7 +85,59 @@ a {
     fill: none;
 }
 
-/* Navigation Menu */
+/* Navigation Menu & Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-logo {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text-sub {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    letter-spacing: 0.5px;
+}
+
 .nav-links-wrapper {
     flex: 1;
     display: flex;
@@ -226,60 +200,6 @@ a {
     border-color: var(--primary-blue);
     color: var(--primary-blue);
     background: rgba(15, 117, 189, 0.05);
-}
-
-/* Navigation Navbar */
-.navbar {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-light);
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition-smooth);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0.75rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.nav-logo {
-    height: 65px;
-    width: auto;
-    object-fit: contain;
-}
-
-.logo-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.logo-text-sub {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--primary-blue);
-    letter-spacing: 0.5px;
-}
-
-/* Logo link click area wrapper */
-.logo-link {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
 }
 
 .nav-cta-btn {
@@ -605,7 +525,7 @@ html[dir="ltr"] .stat-item:last-child {
     margin: 0 auto;
 }
 
-/* Services Row Grid (Side-by-side with photos, 2 rows layout: 3 + 2) */
+/* Services Section */
 .services-section {
     background: var(--bg-white);
 }
@@ -683,7 +603,7 @@ html[dir="ltr"] .stat-item:last-child {
     line-height: 1.6;
 }
 
-/* Why Us Section (Horizontal side-by-side centered layout) */
+/* Why Us Section */
 .why-us-section {
     background: var(--bg-light);
     border-top: 1px solid var(--border-light);
@@ -889,6 +809,10 @@ html[dir="ltr"] .stat-item:last-child {
     gap: 1.25rem;
     box-shadow: var(--shadow-sm);
     transition: var(--transition-smooth);
+    text-align: right;
+}
+
+html[dir="rtl"] .contact-card-item {
     text-align: right;
 }
 
@@ -1191,279 +1115,4 @@ html[lang="en"] .footer-contact {
 .copyright-text {
     font-size: 0.85rem;
     color: var(--text-blue-light);
-}
-
-/* Responsive Media Queries - Ensuring Horizontal/Grid Layout remains */
-@media (max-width: 992px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    .hero-text-block {
-        align-items: center;
-        text-align: center;
-    }
-    .hero-actions {
-        justify-content: center;
-        width: 100%;
-    }
-    .services-row-grid.first-row {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .services-row-grid.second-row {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 800px;
-    }
-    .why-us-horizontal-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-    .stats-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-    .stat-item {
-        border-left: none;
-    }
-    .contact-cards-horizontal-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-    }
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        position: sticky;
-        top: 0;
-    }
-    .nav-container {
-        display: grid;
-        grid-template-areas: 
-            "actions logo"
-            "menu menu";
-        grid-template-columns: auto 1fr;
-        align-items: center;
-        row-gap: 0.75rem;
-        padding: 0.75rem 1rem;
-    }
-    
-    html[lang="en"] .nav-container {
-        grid-template-areas: 
-            "logo actions"
-            "menu menu";
-        grid-template-columns: 1fr auto;
-    }
-
-    .logo-wrapper {
-        grid-area: logo;
-        justify-self: end;
-    }
-
-    html[lang="en"] .logo-wrapper {
-        justify-self: start;
-    }
-
-    .nav-logo {
-        height: 50px;
-        width: auto;
-    }
-
-    .logo-text-sub {
-        font-size: 0.75rem;
-    }
-
-    .nav-actions {
-        grid-area: actions;
-        justify-self: start;
-        gap: 0.75rem;
-    }
-
-    html[lang="en"] .nav-actions {
-        justify-self: end;
-    }
-
-    .lang-btn-nav {
-        padding: 0.35rem 0.85rem;
-        font-size: 0.8rem;
-    }
-
-    .nav-cta-btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
-    }
-
-    .whatsapp-icon {
-        width: 15px;
-        height: 15px;
-    }
-
-    .nav-links-wrapper {
-        grid-area: menu;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        border-top: 1px solid var(--border-light);
-        padding-top: 0.5rem;
-    }
-
-    .nav-menu {
-        gap: 1.25rem;
-    }
-
-    .nav-menu li a {
-        font-size: 0.85rem;
-        padding: 0.4rem 0.8rem;
-    }
-
-    /* Refactor layout elements to 2-columns/1-column under 768px for clean mobile view without horizontal scroll */
-    .services-row-grid.first-row {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-    .services-row-grid.second-row {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        max-width: 100%;
-    }
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-    .why-us-horizontal-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-    .contact-cards-horizontal-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 680px) {
-    .top-bar {
-        padding: 0.5rem 1rem;
-    }
-    .top-bar-container {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-    }
-    .top-bar-info {
-        flex-direction: column;
-        gap: 0.3rem;
-    }
-    .premium-hero {
-        padding: 3rem 1rem;
-    }
-    .hero-actions {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 0 1rem;
-    }
-    .btn-hero-primary,
-    .btn-hero-secondary {
-        width: 100%;
-        justify-content: center;
-    }
-    /* Keeping service cards side-by-side on mobile by using 2-column grid instead of stacking */
-    .services-row-grid.first-row {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-    .services-row-grid.second-row {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-    /* Keeping features side-by-side on mobile by using 2-column grid */
-    .why-us-horizontal-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-    /* Keeping stats side-by-side on mobile by using 2-column grid */
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-    .stat-number {
-        font-size: 1.25rem;
-    }
-    .stat-label {
-        font-size: 0.65rem;
-    }
-    .stat-item {
-        border-left: none;
-    }
-    .section-header {
-        margin-bottom: 2.5rem;
-    }
-    .services-section,
-    .why-us-section,
-    .gallery-section,
-    .booking-section {
-        padding: 4rem 1.25rem;
-    }
-    .carousel-container {
-        aspect-ratio: 4 / 5;
-    }
-    .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-    /* Stack contact cards vertically on mobile for clean, readable layout without overflow */
-    .contact-cards-horizontal-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    .contact-card-item {
-        padding: 1.25rem 1.5rem;
-        gap: 1.25rem;
-        text-align: right;
-    }
-    html[dir="ltr"] .contact-card-item {
-        text-align: left;
-    }
-    .contact-card-value {
-        font-size: 1.1rem;
-    }
-    .contact-card-label {
-        font-size: 0.85rem;
-    }
-    .contact-card-icon {
-        width: 45px;
-        height: 45px;
-    }
-    .contact-svg-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .booking-centered-actions {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 0 1rem;
-    }
-    .booking-action-btn {
-        width: 100%;
-        min-width: 100%;
-    }
-}
-@media (max-width: 480px) {
-    /* Stack contact cards vertically */
-    .contact-cards-horizontal-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-    .services-row-grid.first-row,
-    .services-row-grid.second-row {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
 }
