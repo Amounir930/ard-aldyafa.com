@@ -150,8 +150,27 @@ const translations = {
     }
 };
 
+// Safe localStorage helper to prevent crashes in private browsing mode or when storage is restricted
+const safeLocalStorage = {
+    getItem(key) {
+        try {
+            return localStorage.getItem(key);
+        } catch (e) {
+            console.warn('localStorage is not accessible:', e);
+            return null;
+        }
+    },
+    setItem(key, value) {
+        try {
+            localStorage.setItem(key, value);
+        } catch (e) {
+            console.warn('localStorage is not accessible:', e);
+        }
+    }
+};
+
 // State Variables
-let currentLang = localStorage.getItem('ard_dyafa_lang') || 'ar';
+let currentLang = safeLocalStorage.getItem('ard_dyafa_lang') || 'ar';
 let activeGallerySlide = 0;
 const phoneList = ["97430207961", "97455487821"];
 
@@ -230,12 +249,18 @@ const translatableElements = {
     'footer-copy-text': 'footerCopyText'
 };
 
-// Initialize Page
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize Page (handles cases where DOM is already loaded/deferred script load)
+function initializeApp() {
     applyLanguage(currentLang);
     initGalleryCarousel();
     initNavbarScroll();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeApp);
+} else {
+    initializeApp();
+}
 
 // Localization logic
 function applyLanguage(lang) {
@@ -261,7 +286,7 @@ function applyLanguage(lang) {
     updateGallerySliderPosition();
     
     // Store lang selection
-    localStorage.setItem('ard_dyafa_lang', lang);
+    safeLocalStorage.setItem('ard_dyafa_lang', lang);
     currentLang = lang;
 }
 
