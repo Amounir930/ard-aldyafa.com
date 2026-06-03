@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ard-aldyafa.com/sitemap.xml
