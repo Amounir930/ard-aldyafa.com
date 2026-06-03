@@ -280,7 +280,9 @@ function applyLanguage(lang) {
     }
 
     // Switch text inside language toggle button
-    langToggleBtn.textContent = translations[lang].langBtnText;
+    if (langToggleBtn) {
+        langToggleBtn.textContent = translations[lang].langBtnText;
+    }
 
     // Re-align slider direction settings
     updateGallerySliderPosition();
@@ -291,14 +293,17 @@ function applyLanguage(lang) {
 }
 
 // Lang button listener
-langToggleBtn.addEventListener('click', () => {
-    const targetLang = currentLang === 'ar' ? 'en' : 'ar';
-    applyLanguage(targetLang);
-});
+if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', () => {
+        const targetLang = currentLang === 'ar' ? 'en' : 'ar';
+        applyLanguage(targetLang);
+    });
+}
 
 // Scroll Listener for Navbar styling
 function initNavbarScroll() {
     const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -320,6 +325,7 @@ function initGalleryCarousel() {
     
     slidesNode = document.querySelectorAll('.carousel-slide');
     if (slidesNode.length === 0) return;
+    if (!track || !prevBtn || !nextBtn || !indicatorsContainer) return;
     
     // Create Indicators
     indicatorsContainer.innerHTML = '';
