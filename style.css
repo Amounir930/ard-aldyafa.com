@@ -296,9 +296,9 @@ html[lang="en"] .hero-text-block {
 }
 
 .hero-description {
-    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
     color: var(--text-blue-light);
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: 2.25rem;
 }
 
@@ -388,7 +388,7 @@ html[lang="en"] .hero-text-block {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--text-dark);
     font-weight: 600;
     text-align: right;
@@ -519,10 +519,11 @@ html[dir="ltr"] .stat-item:last-child {
 }
 
 .section-subtitle {
-    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-    color: var(--text-muted);
-    max-width: 600px;
+    font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+    color: var(--text-slate);
+    max-width: 650px;
     margin: 0 auto;
+    line-height: 1.7;
 }
 
 /* Services Section */
@@ -598,9 +599,9 @@ html[dir="ltr"] .stat-item:last-child {
 }
 
 .service-desc-text {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--text-slate);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* Why Us Section */
@@ -618,8 +619,8 @@ html[dir="ltr"] .stat-item:last-child {
 }
 
 .why-us-desc {
-    font-size: 1.05rem;
-    line-height: 1.7;
+    font-size: 1.15rem;
+    line-height: 1.8;
     color: var(--text-slate);
     max-width: 800px;
     margin: 0 auto;
@@ -677,9 +678,9 @@ html[dir="ltr"] .stat-item:last-child {
 }
 
 .why-horizontal-card p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    line-height: 1.6;
+    font-size: 1.05rem;
+    color: var(--text-slate);
+    line-height: 1.7;
 }
 
 /* Gallery Section */
@@ -791,6 +792,20 @@ html[dir="ltr"] .stat-item:last-child {
     text-align: center;
 }
 
+.booking-info-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    color: var(--navy-dark);
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+}
+
+.booking-info-desc {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-slate);
+    margin-bottom: 2.5rem;
+}
+
 .contact-cards-horizontal-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -849,13 +864,14 @@ html[dir="ltr"] .contact-card-item {
 }
 
 .contact-card-label {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+    font-size: 0.9rem;
+    color: var(--text-slate);
     font-weight: 600;
+    margin-bottom: 0.2rem;
 }
 
 .contact-card-value {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--navy-dark);
 }
@@ -1024,9 +1040,9 @@ html[lang="en"] .footer-about {
 }
 
 .footer-desc {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--text-blue-light);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .footer-section-title {

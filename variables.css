@@ -48,8 +48,8 @@ html, body {
 body {
     background-color: var(--bg-light);
     color: var(--text-slate);
-    font-family: 'Cairo', sans-serif;
-    line-height: 1.6;
+    font-family: 'Tajawal', 'Cairo', sans-serif;
+    line-height: 1.75;
 }
 
 /* Direction Alignment */
