@@ -3,7 +3,7 @@
 // Translation Dictionary
 const translations = {
     ar: {
-        title: "أرض الضيافة | عاملات وخادمات منزليات بعقود شهرية في قطر - 30207961",
+        title: "ارض الضيافة للخدمات والتجارة - خبرة، ثقة، وراحة 📞 55487821",
         topBarZone: "قطر",
         topPhoneLabel: "اتصل بنا: ",
         navSubtitle: "للخدمات والتجارة",
@@ -37,7 +37,7 @@ const translations = {
         srv3Title: "تنظيف المطابخ والحمامات",
         srv3Desc: "تعقيم وتنظيف عميق للمطابخ وإزالة الدهون، وتطهير الحمامات بأفضل المعقمات والمنظفات.",
         srv4Title: "العناية اليومية بالمنزل",
-        srv4Desc: "ترتيب يومي ومتابعة مستمرة لتفاصيل المنزل ليبقى دائماً مهيأً لاستقبال عائلتك وضيوفتك.",
+        srv4Desc: "ترتيب يومي ومتابعة مستمرة لتفاصيل المنزل ليبقى دائماً مهيأً استقبال عائلتك وضيوفتك.",
         srv5Title: "الأعمال المنزلية المختلفة",
         srv5Desc: "مساعدة مرنة في شتى المهام المنزلية التي تطلبها الأسرة لتوفير الوقت والجهد للجميع.",
         whyUsBadge: "لماذا تختارنا",
@@ -76,7 +76,7 @@ const translations = {
         langBtnText: "English"
     },
     en: {
-        title: "Ard Al-Dyafa | Domestic Maids & Workers Monthly Contracts in Qatar - 30207961",
+        title: "Ard Al-Dyafa for Services & Trade - Experience, Trust, & Comfort 📞 55487821",
         topBarZone: "Qatar",
         topPhoneLabel: "Call: ",
         navSubtitle: "for Services & Trade",
